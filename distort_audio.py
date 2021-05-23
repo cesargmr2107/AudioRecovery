@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # Create encoder to get info positions
     encoder = TruncatedBinaryHamming(wanted_k=16)
 
-    # Generated distorted encoded_audio file and distorted audio
+    # Generate distorted encoded_audio file and distorted audio
     distorted_encoded = []
     distorted_audio = []
     for encoded_sample in encoded_audio:
