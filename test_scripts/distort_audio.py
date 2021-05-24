@@ -6,7 +6,7 @@ from TruncatedBinaryHamming import TruncatedBinaryHamming
 
 if __name__ == "__main__":
     # Load encoded_audio audio file
-    encoded_audio = numpy.load("music_files/encoded_audio.npy")
+    encoded_audio = numpy.load("../music_files/encoded_audio.npy")
 
     # Create encoder to get info positions
     encoder = TruncatedBinaryHamming(wanted_k=16)
@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     # Store distorted encoded_audio file
     numpy_encoded_array = numpy.array(distorted_encoded)
-    numpy.save("music_files/distorted", numpy_encoded_array)
+    numpy.save("../music_files/distorted", numpy_encoded_array)
 
     # Store distorted audio file
     numpy_audio_array = numpy.array(distorted_audio, dtype=numpy.int16)
-    wav.write(filename="music_files/distorted.wav", rate=22050, data=numpy_audio_array)
+    wav.write(filename="../music_files/distorted.wav", rate=22050, data=numpy_audio_array)

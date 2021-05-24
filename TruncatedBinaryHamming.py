@@ -119,7 +119,7 @@ class TruncatedBinaryHamming:
         original_word = numpy.copy(encoded_word)
         decoded, syndrome, error = self.decode_word(encoded_word)
         print(f"{'-' * 50}")
-        print(f"Decoding {encoded_word}:")
+        print(f"Decoding {original_word}:")
         print(f"\t- Detected error in {original_word}? {error}")
         print(f"\t- Syndrome: {syndrome}")
         if error:
